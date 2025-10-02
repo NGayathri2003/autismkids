@@ -1,5 +1,5 @@
-import React, { useState } from "https://cdn.skypack.dev/react";
-import ReactDOM from "https://cdn.skypack.dev/react-dom";
+import React, { useState } from "react";
+import "./App.css";
 
 const colors = [
   { name: "Red", code: "#FF0000" },
@@ -50,4 +50,4 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+export default App;
