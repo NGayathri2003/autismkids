@@ -16,9 +16,9 @@ function App() {
 
   const handleClick = (name) => {
     if (name === colors[current].name) {
-      setFeedback("Correct!");
+      setFeedback("✅ Correct!");
     } else {
-      setFeedback("Try Again!");
+      setFeedback("❌ Try Again!");
     }
   };
 
@@ -29,23 +29,22 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Learn Colors</h1>
+      <h1>🎨 Learn Colors</h1>
       <div
         className="color-box"
         style={{ backgroundColor: colors[current].code }}
       ></div>
-      <div>
+      <div className="buttons">
         {colors.map((color) => (
-          <button
-            key={color.name}
-            onClick={() => handleClick(color.name)}
-          >
+          <button key={color.name} onClick={() => handleClick(color.name)}>
             {color.name}
           </button>
         ))}
       </div>
       <h2>{feedback}</h2>
-      <button onClick={nextColor}>Next Color</button>
+      <button className="next-btn" onClick={nextColor}>
+        Next Color
+      </button>
     </div>
   );
 }
